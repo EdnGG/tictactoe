@@ -55,12 +55,12 @@ function checkWin(board, player) {
 function gameOver(gameWon) {
 	for (let index of winCombos[gameWon.index]) {
 		document.getElementById(index).style.backgroundColor =
-			gameWon.player == huPlayer ? "blue" : "red";
+			gameWon.player == huPlayer ? "blue" : "orange";
 	}
 	for (var i = 0; i < cells.length; i++) {
 		cells[i].removeEventListener('click', turnClick, false);
 	}
-	declareWinner(gameWon.player == huPlayer ? "Your a BadAss Guy!" : "Your sucks  .|.");
+	declareWinner(gameWon.player == huPlayer ? "Your a BadAss Guy!" : "Your sucks Dawg .|.");
 }
 
 function declareWinner(who) {
